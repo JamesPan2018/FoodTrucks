@@ -1,0 +1,14 @@
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/config/SecurityConfig.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/FoodtrucksApplication.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/service/impl/FoodTruckServiceImpl.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/service/UserService.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/service/impl/UserServiceImpl.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/service/FoodTruckService.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/init/DataBaseInitializeService.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/config/AppConfig.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/aop/LoggingAspect.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/model/User.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/mappers/FoodTruckMapper.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/model/FoodTruck.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/config/MyBatisConfig.java
+/Users/panjun/Desktop/Java/Demo/FoodTrucks/src/main/java/com/mfft/foodtrucks/controller/FoodTruckController.java

@@ -1,0 +1,14 @@
+com/mfft/foodtrucks/FoodtrucksApplication.class
+com/mfft/foodtrucks/config/SecurityConfig.class
+com/mfft/foodtrucks/config/AppConfig.class
+com/mfft/foodtrucks/config/MyBatisConfig.class
+com/mfft/foodtrucks/mappers/FoodTruckMapper.class
+com/mfft/foodtrucks/service/UserService.class
+com/mfft/foodtrucks/init/DataBaseInitializeService.class
+com/mfft/foodtrucks/service/impl/UserServiceImpl.class
+com/mfft/foodtrucks/aop/LoggingAspect.class
+com/mfft/foodtrucks/service/impl/FoodTruckServiceImpl.class
+com/mfft/foodtrucks/model/User.class
+com/mfft/foodtrucks/controller/FoodTruckController.class
+com/mfft/foodtrucks/service/FoodTruckService.class
+com/mfft/foodtrucks/model/FoodTruck.class

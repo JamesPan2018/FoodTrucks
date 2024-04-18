@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "c63a6867-ff54-44ce-8696-91dc1a9d7243",
+		"name": "FoodTruck",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21165730"
+	},
+	"item": [
+		{
+			"name": "Get All Food Trucks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/foodtrucks/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Food Truck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"locationid\": \"123456\",\n    \"applicant\": \"John Doe\",\n    \"facilityType\": \"Truck\",\n    \"cnn\": \"456\",\n    \"locationDescription\": \"Near the park\",\n    \"address\": \"123 Main St\",\n    \"blocklot\": \"789\",\n    \"block\": \"Block\",\n    \"lot\": \"Lot\",\n    \"permit\": \"ABC123\",\n    \"status\": \"Active\",\n    \"foodItems\": \"Tacos, Burritos\",\n    \"x\": 37.1234,\n    \"y\": -122.5678,\n    \"latitude\": 37.1234,\n    \"longitude\": -122.5678,\n    \"schedule\": \"Mon-Fri 10am-8pm\",\n    \"dayshours\": \"Mon-Fri: 10am-8pm\",\n    \"noiSent\": \"Yes\",\n    \"approved\": \"Yes\",\n    \"received\": \"2024-04-15\",\n    \"priorPermit\": \"DEF456\",\n    \"expirationDate\": \"2025-04-15\",\n    \"location\": \"San Francisco\",\n    \"firePreventionDistricts\": 5,\n    \"policeDistricts\": 3,\n    \"supervisorDistricts\": 8,\n    \"zipCodes\": 94110,\n    \"neighborhoods_old\": \"Mission\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/foodtrucks/insert",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Food Truck",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"locationid\": \"1576226\",\n    \"applicant\": \"Natan's Catering1111\",\n    \"facilityType\": \"Truck\",\n    \"cnn\": \"3376000\",\n    \"locationDescription\": \"BURKE AVE: START: 1500-1599 BLOCK to 03RD ST (1500 - 1599)\",\n    \"address\": \"1580 BURKE AVE\",\n    \"blocklot\": \"5203066\",\n    \"block\": null,\n    \"lot\": \"066\",\n    \"permit\": \"21MFF-00118\",\n    \"status\": null,\n    \"foodItems\": \"Burgers: melts: hot dogs: burritos:sandwiches: fries: onion rings: drinks\",\n    \"latitude\": \"37.74475219161639\",\n    \"longitude\": \"-122.38567924872147\",\n    \"schedule\": null,\n    \"dayshours\": \"\",\n    \"noiSent\": \"\",\n    \"approved\": \"\",\n    \"received\": \"20211202\",\n    \"priorPermit\": \"01/15/2022 12:00:00 AM\",\n    \"expirationDate\": \"01/15/2022 12:00:00 AM\",\n    \"location\": \"\\\"(37.74475219161639,-122.38567924872147)\\\"\",\n    \"firePreventionDistricts\": \"10\",\n    \"policeDistricts\": \"3\",\n    \"supervisorDistricts\": \"8\",\n    \"zipCodes\": \"58\",\n    \"neighborhoods_old\": \"1\",\n    \"x\": \"6016479.94361\",\n    \"y\": \"2099135.86798\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/foodtrucks/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Food Trucks Paged",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "Increase from number 1",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/foodtrucks/getAll/paged",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"getAll",
+						"paged"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Food Truck By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/foodtrucks/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"100"
+					],
+					"query": [
+						{
+							"key": "{id}",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Food Truck By Type",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "facilityType",
+							"value": "Truck",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/foodtrucks/filter/facilityType",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"filter",
+						"facilityType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Food Truck By Location Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "locationId",
+							"value": "1565593",
+							"type": "text"
+						},
+						{
+							"key": "locationId",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/foodtrucks/filter/locationId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"filter",
+						"locationId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Food Truck By Location Description Keyword",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "keyword",
+							"value": "SKYLINE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/foodtrucks/filter/locationDescription",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"foodtrucks",
+						"filter",
+						"locationDescription"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mfft.foodtrucks.mappers.FoodTruckMapper">
+
+    <insert id="insertFoodTruck" parameterType="com.mfft.foodtrucks.model.FoodTruck">
+        INSERT INTO food_truck ( locationid, applicant, facilityType, cnn, locationDescription, address, blocklot, block_value
+                               , lot, permit, status_value, foodItems, X, Y
+                               , latitude, longitude, schedule_value, dayshours, noiSent, approved
+                               , received, priorPermit, expirationDate, location, firePreventionDistricts
+                               , policeDistricts, supervisorDistricts, zipCodes, neighborhoods_old)
+        VALUES ( #{locationid}, #{applicant}, #{facilityType}, #{cnn}, #{locationDescription}, #{address}, #{blocklot}
+               , #{block}, #{lot}, #{permit}, #{status}, #{foodItems}, #{X}, #{Y}, #{latitude}
+               , #{longitude}, #{schedule}, #{dayshours}, #{noiSent}, #{approved}, #{received}, #{priorPermit}
+               , #{expirationDate}, #{location}, #{firePreventionDistricts}, #{policeDistricts}, #{supervisorDistricts}
+               , #{zipCodes}, #{neighborhoodsOld})
+    </insert>
+
+    <select id="getAllFoodTrucks" resultType="com.mfft.foodtrucks.model.FoodTruck">
+        SELECT * FROM food_truck;
+    </select>
+
+    <select id="getFoodTruckById" resultType="com.mfft.foodtrucks.model.FoodTruck" parameterType="java.lang.Long">
+        SELECT * FROM food_truck WHERE id = #{id};
+    </select>
+
+    <select id="getFoodTruckByLocationDescriptionKeyword" resultType="com.mfft.foodtrucks.model.FoodTruck" parameterType="java.lang.String">
+        SELECT * FROM food_truck WHERE locationDescription LIKE CONCAT('%', #{keyword}, '%');
+    </select>
+
+    <select id="getFoodTrucksByLocationId" resultType="com.mfft.foodtrucks.model.FoodTruck" parameterType="java.lang.String">
+        SELECT * FROM food_truck WHERE locationId = #{locationId};
+    </select>
+
+    <select id="getFoodTrucksByFacilityType" resultType="com.mfft.foodtrucks.model.FoodTruck" parameterType="java.lang.String">
+        SELECT * FROM food_truck WHERE facilityType = #{facilityType};
+    </select>
+
+    <select id="getAllFoodTrucksPaged" resultType="com.mfft.foodtrucks.model.FoodTruck">
+        SELECT * FROM food_truck LIMIT #{offset}, #{limit};
+    </select>
+
+    <!-- 更新食品车辆信息 -->
+    <update id="updateFoodTruck" parameterType="com.mfft.foodtrucks.model.FoodTruck">
+        UPDATE food_truck
+        SET
+            locationid = #{locationid},
+            applicant = #{applicant},
+            facilityType = #{facilityType},
+            cnn = #{cnn},
+            locationDescription = #{locationDescription},
+            address = #{address},
+            blocklot = #{blocklot},
+            block_value = #{block},
+            lot = #{lot},
+            permit = #{permit},
+            status_value = #{status},
+            foodItems = #{foodItems},
+            X = #{X},
+            Y = #{Y},
+            latitude = #{latitude},
+            longitude = #{longitude},
+            schedule_value = #{schedule},
+            dayshours = #{dayshours},
+            noiSent = #{noiSent},
+            approved = #{approved},
+            received = #{received},
+            priorPermit = #{priorPermit},
+            expirationDate = #{expirationDate},
+            location = #{location},
+            firePreventionDistricts = #{firePreventionDistricts},
+            policeDistricts = #{policeDistricts},
+            supervisorDistricts = #{supervisorDistricts},
+            zipCodes = #{zipCodes},
+            neighborhoods_old = #{neighborhoodsOld}
+        WHERE id = #{id}
+    </update>
+
+</mapper>
