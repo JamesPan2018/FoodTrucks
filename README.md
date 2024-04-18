@@ -30,14 +30,14 @@
     RESTFUL API：
     
     3.3 RESTful API
-    GET /foodtrucks: 获取所有食品车辆信息。
-    GET /getAll/paged：获取所有食品车辆信息（分页）。
-    GET /foodtrucks/{id}: 根据 ID 获取特定食品车辆信息。
-    GET /filter/locationDescription： 根据 locationDescription 获取特定食品车辆信息。
-    GET /filter/locationId：根据 locationId 获取特定食品车辆信息。
-    GET /filter/facilityType：根据 facilityType 获取特定食品车辆信息。
-    POST /insert: 添加新的食品车辆信息。
-    PUT /{id}：根据 ID 更新特定食品车辆信息
+    * GET /foodtrucks: 获取所有食品车辆信息。
+    * GET /getAll/paged：获取所有食品车辆信息（分页）。
+    * GET /foodtrucks/{id}: 根据 ID 获取特定食品车辆信息。
+    * GET /filter/locationDescription： 根据 locationDescription 获取特定食品车辆信息。
+    * GET /filter/locationId：根据 locationId 获取特定食品车辆信息。
+    * GET /filter/facilityType：根据 facilityType 获取特定食品车辆信息。
+    * POST /insert: 添加新的食品车辆信息。
+    * PUT /{id}：根据 ID 更新特定食品车辆信息
    
 
    
